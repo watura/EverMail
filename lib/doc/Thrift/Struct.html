@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Thrift::Struct</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../thrift/struct_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="thrift/struct.rb">thrift/struct.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-append_features">::append_features</a></li>
+					
+					<li><a href="#method-c-field_accessor">::field_accessor</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3D%3D">#==</a></li>
+					
+					<li><a href="#method-i-differences">#differences</a></li>
+					
+					<li><a href="#method-i-each_field">#each_field</a></li>
+					
+					<li><a href="#method-i-eql%3F">#eql?</a></li>
+					
+					<li><a href="#method-i-exception_initialize">#exception_initialize</a></li>
+					
+					<li><a href="#method-i-field_info">#field_info</a></li>
+					
+					<li><a href="#method-i-fields_with_default_values">#fields_with_default_values</a></li>
+					
+					<li><a href="#method-i-handle_message">#handle_message</a></li>
+					
+					<li><a href="#method-i-hash">#hash</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-is_container%3F">#is_container?</a></li>
+					
+					<li><a href="#method-i-name_to_id">#name_to_id</a></li>
+					
+					<li><a href="#method-i-read">#read</a></li>
+					
+					<li><a href="#method-i-read_field">#read_field</a></li>
+					
+					<li><a href="#method-i-write">#write</a></li>
+					
+					<li><a href="#method-i-write_container">#write_container</a></li>
+					
+					<li><a href="#method-i-write_data">#write_data</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Evernote.html">Evernote</a></li>
+				
+					<li><a href="../Evernote/EDAM.html">Evernote::EDAM</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error.html">Evernote::EDAM::Error</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMErrorCode.html">Evernote::EDAM::Error::EDAMErrorCode</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMNotFoundException.html">Evernote::EDAM::Error::EDAMNotFoundException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMSystemException.html">Evernote::EDAM::Error::EDAMSystemException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMUserException.html">Evernote::EDAM::Error::EDAMUserException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Limits.html">Evernote::EDAM::Limits</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore.html">Evernote::EDAM::NoteStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/AdImpressions.html">Evernote::EDAM::NoteStore::AdImpressions</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/AdParameters.html">Evernote::EDAM::NoteStore::AdParameters</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteCollectionCounts.html">Evernote::EDAM::NoteStore::NoteCollectionCounts</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteEmailParameters.html">Evernote::EDAM::NoteStore::NoteEmailParameters</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteFilter.html">Evernote::EDAM::NoteStore::NoteFilter</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteList.html">Evernote::EDAM::NoteStore::NoteList</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore.html">Evernote::EDAM::NoteStore::NoteStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/AuthenticateToSharedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::AuthenticateToSharedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/AuthenticateToSharedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::AuthenticateToSharedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/Client.html">Evernote::EDAM::NoteStore::NoteStore::Client</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CopyNote_args.html">Evernote::EDAM::NoteStore::NoteStore::CopyNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CopyNote_result.html">Evernote::EDAM::NoteStore::NoteStore::CopyNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNote_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNote_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSharedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateSharedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSharedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateSharedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateTag_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateTag_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/DeleteNote_args.html">Evernote::EDAM::NoteStore::NoteStore::DeleteNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/DeleteNote_result.html">Evernote::EDAM::NoteStore::NoteStore::DeleteNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/EmailNote_args.html">Evernote::EDAM::NoteStore::NoteStore::EmailNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/EmailNote_result.html">Evernote::EDAM::NoteStore::NoteStore::EmailNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeInactiveNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeInactiveNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeInactiveNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeInactiveNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNote_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNote_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSharedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSharedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSharedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSharedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeTag_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeTag_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNoteCounts_args.html">Evernote::EDAM::NoteStore::NoteStore::FindNoteCounts_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNoteCounts_result.html">Evernote::EDAM::NoteStore::NoteStore::FindNoteCounts_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::FindNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::FindNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAccountSize_args.html">Evernote::EDAM::NoteStore::NoteStore::GetAccountSize_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAccountSize_result.html">Evernote::EDAM::NoteStore::NoteStore::GetAccountSize_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAds_args.html">Evernote::EDAM::NoteStore::NoteStore::GetAds_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAds_result.html">Evernote::EDAM::NoteStore::NoteStore::GetAds_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetDefaultNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetDefaultNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetDefaultNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetDefaultNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteContent_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteContent_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteContent_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteContent_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteSearchText_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteSearchText_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteSearchText_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteSearchText_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteTagNames_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteTagNames_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteTagNames_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteTagNames_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteVersion_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteVersion_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteVersion_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteVersion_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNote_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNote_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetPublicNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetPublicNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetPublicNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetPublicNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetRandomAd_args.html">Evernote::EDAM::NoteStore::NoteStore::GetRandomAd_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetRandomAd_result.html">Evernote::EDAM::NoteStore::NoteStore::GetRandomAd_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAlternateData_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAlternateData_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAlternateData_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAlternateData_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAttributes_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAttributes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAttributes_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAttributes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceByHash_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceByHash_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceByHash_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceByHash_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceData_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceData_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceData_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceData_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceRecognition_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceRecognition_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceRecognition_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceRecognition_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResource_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResource_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResource_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResource_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSharedNotebookByAuth_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSharedNotebookByAuth_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSharedNotebookByAuth_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSharedNotebookByAuth_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncChunk_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncChunk_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncChunk_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncChunk_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncState_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncState_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncState_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncState_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetTag_args.html">Evernote::EDAM::NoteStore::NoteStore::GetTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetTag_result.html">Evernote::EDAM::NoteStore::NoteStore::GetTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListLinkedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListLinkedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListLinkedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListLinkedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNoteVersions_args.html">Evernote::EDAM::NoteStore::NoteStore::ListNoteVersions_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNoteVersions_result.html">Evernote::EDAM::NoteStore::NoteStore::ListNoteVersions_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSearches_args.html">Evernote::EDAM::NoteStore::NoteStore::ListSearches_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSearches_result.html">Evernote::EDAM::NoteStore::NoteStore::ListSearches_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSharedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListSharedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSharedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListSharedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTagsByNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ListTagsByNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTagsByNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ListTagsByNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTags_args.html">Evernote::EDAM::NoteStore::NoteStore::ListTags_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTags_result.html">Evernote::EDAM::NoteStore::NoteStore::ListTags_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/Processor.html">Evernote::EDAM::NoteStore::NoteStore::Processor</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UntagAll_args.html">Evernote::EDAM::NoteStore::NoteStore::UntagAll_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UntagAll_result.html">Evernote::EDAM::NoteStore::NoteStore::UntagAll_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNote_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNote_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateResource_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateResource_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateResource_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateResource_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateTag_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateTag_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteVersionId.html">Evernote::EDAM::NoteStore::NoteVersionId</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/SyncChunk.html">Evernote::EDAM::NoteStore::SyncChunk</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/SyncState.html">Evernote::EDAM::NoteStore::SyncState</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type.html">Evernote::EDAM::Type</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Accounting.html">Evernote::EDAM::Type::Accounting</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Ad.html">Evernote::EDAM::Type::Ad</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Data.html">Evernote::EDAM::Type::Data</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/LinkedNotebook.html">Evernote::EDAM::Type::LinkedNotebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Note.html">Evernote::EDAM::Type::Note</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/NoteAttributes.html">Evernote::EDAM::Type::NoteAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/NoteSortOrder.html">Evernote::EDAM::Type::NoteSortOrder</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Notebook.html">Evernote::EDAM::Type::Notebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/PremiumOrderStatus.html">Evernote::EDAM::Type::PremiumOrderStatus</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/PrivilegeLevel.html">Evernote::EDAM::Type::PrivilegeLevel</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Publishing.html">Evernote::EDAM::Type::Publishing</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/QueryFormat.html">Evernote::EDAM::Type::QueryFormat</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Resource.html">Evernote::EDAM::Type::Resource</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/ResourceAttributes.html">Evernote::EDAM::Type::ResourceAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/SavedSearch.html">Evernote::EDAM::Type::SavedSearch</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/SharedNotebook.html">Evernote::EDAM::Type::SharedNotebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Tag.html">Evernote::EDAM::Type::Tag</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/User.html">Evernote::EDAM::Type::User</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/UserAttributes.html">Evernote::EDAM::Type::UserAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore.html">Evernote::EDAM::UserStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/AuthenticationResult.html">Evernote::EDAM::UserStore::AuthenticationResult</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/PublicUserInfo.html">Evernote::EDAM::UserStore::PublicUserInfo</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore.html">Evernote::EDAM::UserStore::UserStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Authenticate_args.html">Evernote::EDAM::UserStore::UserStore::Authenticate_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Authenticate_result.html">Evernote::EDAM::UserStore::UserStore::Authenticate_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/CheckVersion_args.html">Evernote::EDAM::UserStore::UserStore::CheckVersion_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/CheckVersion_result.html">Evernote::EDAM::UserStore::UserStore::CheckVersion_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Client.html">Evernote::EDAM::UserStore::UserStore::Client</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetPublicUserInfo_args.html">Evernote::EDAM::UserStore::UserStore::GetPublicUserInfo_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetPublicUserInfo_result.html">Evernote::EDAM::UserStore::UserStore::GetPublicUserInfo_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetUser_args.html">Evernote::EDAM::UserStore::UserStore::GetUser_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetUser_result.html">Evernote::EDAM::UserStore::UserStore::GetUser_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Processor.html">Evernote::EDAM::UserStore::UserStore::Processor</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/RefreshAuthentication_args.html">Evernote::EDAM::UserStore::UserStore::RefreshAuthentication_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/RefreshAuthentication_result.html">Evernote::EDAM::UserStore::UserStore::RefreshAuthentication_result</a></li>
+				
+					<li><a href="../Thrift.html">Thrift</a></li>
+				
+					<li><a href="../Thrift/ApplicationException.html">Thrift::ApplicationException</a></li>
+				
+					<li><a href="../Thrift/BaseProtocol.html">Thrift::BaseProtocol</a></li>
+				
+					<li><a href="../Thrift/BaseProtocolFactory.html">Thrift::BaseProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/BaseServer.html">Thrift::BaseServer</a></li>
+				
+					<li><a href="../Thrift/BaseServerTransport.html">Thrift::BaseServerTransport</a></li>
+				
+					<li><a href="../Thrift/BaseTransport.html">Thrift::BaseTransport</a></li>
+				
+					<li><a href="../Thrift/BaseTransportFactory.html">Thrift::BaseTransportFactory</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocol.html">Thrift::BinaryProtocol</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocolAcceleratedFactory.html">Thrift::BinaryProtocolAcceleratedFactory</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocolFactory.html">Thrift::BinaryProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/BufferedTransport.html">Thrift::BufferedTransport</a></li>
+				
+					<li><a href="../Thrift/BufferedTransportFactory.html">Thrift::BufferedTransportFactory</a></li>
+				
+					<li><a href="../Thrift/Client.html">Thrift::Client</a></li>
+				
+					<li><a href="../Thrift/CompactProtocol.html">Thrift::CompactProtocol</a></li>
+				
+					<li><a href="../Thrift/CompactProtocol/CompactTypes.html">Thrift::CompactProtocol::CompactTypes</a></li>
+				
+					<li><a href="../Thrift/CompactProtocolFactory.html">Thrift::CompactProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/Deserializer.html">Thrift::Deserializer</a></li>
+				
+					<li><a href="../Thrift/Exception.html">Thrift::Exception</a></li>
+				
+					<li><a href="../Thrift/FramedTransport.html">Thrift::FramedTransport</a></li>
+				
+					<li><a href="../Thrift/FramedTransportFactory.html">Thrift::FramedTransportFactory</a></li>
+				
+					<li><a href="../Thrift/HTTPClientTransport.html">Thrift::HTTPClientTransport</a></li>
+				
+					<li><a href="../Thrift/IOStreamTransport.html">Thrift::IOStreamTransport</a></li>
+				
+					<li><a href="../Thrift/MemoryBufferTransport.html">Thrift::MemoryBufferTransport</a></li>
+				
+					<li><a href="../Thrift/MessageTypes.html">Thrift::MessageTypes</a></li>
+				
+					<li><a href="../Thrift/MongrelHTTPServer.html">Thrift::MongrelHTTPServer</a></li>
+				
+					<li><a href="../Thrift/MongrelHTTPServer/Handler.html">Thrift::MongrelHTTPServer::Handler</a></li>
+				
+					<li><a href="../Thrift/NonblockingServer.html">Thrift::NonblockingServer</a></li>
+				
+					<li><a href="../Thrift/Processor.html">Thrift::Processor</a></li>
+				
+					<li><a href="../Thrift/ProtocolException.html">Thrift::ProtocolException</a></li>
+				
+					<li><a href="../Thrift/Serializer.html">Thrift::Serializer</a></li>
+				
+					<li><a href="../Thrift/ServerSocket.html">Thrift::ServerSocket</a></li>
+				
+					<li><a href="../Thrift/SimpleServer.html">Thrift::SimpleServer</a></li>
+				
+					<li><a href="../Thrift/Socket.html">Thrift::Socket</a></li>
+				
+					<li><a href="../Thrift/Struct.html">Thrift::Struct</a></li>
+				
+					<li><a href="../Thrift/ThreadPoolServer.html">Thrift::ThreadPoolServer</a></li>
+				
+					<li><a href="../Thrift/ThreadedServer.html">Thrift::ThreadedServer</a></li>
+				
+					<li><a href="../Thrift/TransportException.html">Thrift::TransportException</a></li>
+				
+					<li><a href="../Thrift/TypeError.html">Thrift::TypeError</a></li>
+				
+					<li><a href="../Thrift/Types.html">Thrift::Types</a></li>
+				
+					<li><a href="../Thrift/UNIXServerSocket.html">Thrift::UNIXServerSocket</a></li>
+				
+					<li><a href="../Thrift/UNIXSocket.html">Thrift::UNIXSocket</a></li>
+				
+					<li><a href="../Fixnum.html">Fixnum</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Thrift::Struct</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CONTAINER_TYPES">CONTAINER_TYPES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="field-accessor-method" class="method-detail ">
+				<a name="method-c-field_accessor"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">field_accessor</span><span
+						class="method-args">(klass, *fields)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="field-accessor-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 166</span>
+166:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field_accessor</span>(<span class="ruby-identifier">klass</span>, *<span class="ruby-identifier">fields</span>)
+167:       <span class="ruby-identifier">fields</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span>
+168:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:attr_reader</span>, <span class="ruby-identifier">field</span>
+169:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:define_method</span>, <span class="ruby-node">&quot;#{field}=&quot;</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+170:           <span class="ruby-constant">Thrift</span>.<span class="ruby-identifier">check_type</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">::</span><span class="ruby-constant">FIELDS</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">field</span>.<span class="ruby-identifier">to_s</span> }, <span class="ruby-identifier">field</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Thrift</span>.<span class="ruby-identifier">type_checking</span>
+171:           <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{field}&quot;</span>, <span class="ruby-identifier">value</span>)
+172:         <span class="ruby-keyword kw">end</span>
+173:       <span class="ruby-keyword kw">end</span>
+174:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(d={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/struct.rb, line 24</span>
+24:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">d</span>={})
+25:       <span class="ruby-comment cmt"># get a copy of the default values to work on, removing defaults in favor of arguments</span>
+26:       <span class="ruby-identifier">fields_with_defaults</span> = <span class="ruby-identifier">fields_with_default_values</span>.<span class="ruby-identifier">dup</span>
+27:       
+28:       <span class="ruby-comment cmt"># check if the defaults is empty, or if there are no parameters for this </span>
+29:       <span class="ruby-comment cmt"># instantiation, and if so, don't bother overriding defaults.</span>
+30:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fields_with_defaults</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">empty?</span>
+31:         <span class="ruby-identifier">d</span>.<span class="ruby-identifier">each_key</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+32:           <span class="ruby-identifier">fields_with_defaults</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>)
+33:         <span class="ruby-keyword kw">end</span>
+34:       <span class="ruby-keyword kw">end</span>
+35:       
+36:       <span class="ruby-comment cmt"># assign all the user-specified arguments</span>
+37:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">empty?</span>
+38:         <span class="ruby-identifier">d</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+39:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name_to_id</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>)
+40:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Unknown key given to #{self.class}.new: #{name}&quot;</span>
+41:           <span class="ruby-keyword kw">end</span>
+42:           <span class="ruby-constant">Thrift</span>.<span class="ruby-identifier">check_type</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">struct_fields</span>[<span class="ruby-identifier">name_to_id</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>)], <span class="ruby-identifier">name</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Thrift</span>.<span class="ruby-identifier">type_checking</span>
+43:           <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>, <span class="ruby-identifier">value</span>)
+44:         <span class="ruby-keyword kw">end</span>
+45:       <span class="ruby-keyword kw">end</span>
+46:       
+47:       <span class="ruby-comment cmt"># assign all the default values</span>
+48:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fields_with_defaults</span>.<span class="ruby-identifier">empty?</span>
+49:         <span class="ruby-identifier">fields_with_defaults</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">default_value</span><span class="ruby-operator">|</span>
+50:           <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>, (<span class="ruby-identifier">default_value</span>.<span class="ruby-identifier">dup</span> <span class="ruby-keyword kw">rescue</span> <span class="ruby-identifier">default_value</span>))
+51:         <span class="ruby-keyword kw">end</span>
+52:       <span class="ruby-keyword kw">end</span>
+53:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-class-method-details" class="method-section section">
+			<h3 class="section-header">Protected Class Methods</h3>
+
+		
+			<div id="append-features-method" class="method-detail ">
+				<a name="method-c-append_features"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">append_features</span><span
+						class="method-args">(mod)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="append-features-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 178</span>
+178:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">append_features</span>(<span class="ruby-identifier">mod</span>)
+179:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">ancestors</span>.<span class="ruby-identifier">include?</span> <span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>
+180:         <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:class_variable_set</span>, <span class="ruby-value">:'@@__thrift_struct_real_initialize'</span>, <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-value">:initialize</span>)
+181:         <span class="ruby-keyword kw">super</span>
+182:         <span class="ruby-comment cmt"># set up our custom initializer so `raise Xception, 'message'` works</span>
+183:         <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:define_method</span>, <span class="ruby-value">:struct_initialize</span>, <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-value">:initialize</span>)
+184:         <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:define_method</span>, <span class="ruby-value">:initialize</span>, <span class="ruby-identifier">mod</span>.<span class="ruby-identifier">instance_method</span>(<span class="ruby-value">:exception_initialize</span>)
+185:       <span class="ruby-keyword kw">else</span>
+186:         <span class="ruby-keyword kw">super</span>
+187:       <span class="ruby-keyword kw">end</span>
+188:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">==</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 132</span>
+132:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+133:       <span class="ruby-identifier">each_field</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_info</span><span class="ruby-operator">|</span>
+134:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:name</span>]
+135:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+136:       <span class="ruby-keyword kw">end</span>
+137:       <span class="ruby-keyword kw">true</span>
+138:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="differences-method" class="method-detail ">
+				<a name="method-i-differences"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">differences</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="differences-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 153</span>
+153:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">differences</span>(<span class="ruby-identifier">other</span>)
+154:       <span class="ruby-identifier">diffs</span> = []
+155:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>)
+156:         <span class="ruby-identifier">diffs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;Different class!&quot;</span>
+157:       <span class="ruby-keyword kw">else</span>
+158:         <span class="ruby-identifier">each_field</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_info</span><span class="ruby-operator">|</span>
+159:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:name</span>]
+160:           <span class="ruby-identifier">diffs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name} differs!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+161:         <span class="ruby-keyword kw">end</span>
+162:       <span class="ruby-keyword kw">end</span>
+163:       <span class="ruby-identifier">diffs</span>
+164:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-field-method" class="method-detail ">
+				<a name="method-i-each_field"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each_field</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-field-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/struct.rb, line 81</span>
+81:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_field</span>
+82:       <span class="ruby-identifier">struct_fields</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span><span class="ruby-operator">|</span>
+83:         <span class="ruby-identifier">data</span> = <span class="ruby-identifier">struct_fields</span>[<span class="ruby-identifier">fid</span>]
+84:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">fid</span>, <span class="ruby-identifier">data</span>
+85:       <span class="ruby-keyword kw">end</span>
+86:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eql--method" class="method-detail ">
+				<a name="method-i-eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eql?</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="eql--source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>)
+141:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">self</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>
+142:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fields-with-default-values-method" class="method-detail ">
+				<a name="method-i-fields_with_default_values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fields_with_default_values</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="fields-with-default-values-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/struct.rb, line 55</span>
+55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fields_with_default_values</span>
+56:       <span class="ruby-identifier">fields_with_default_values</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value str">&quot;@fields_with_default_values&quot;</span>)
+57:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fields_with_default_values</span>
+58:         <span class="ruby-identifier">fields_with_default_values</span> = {}
+59:         <span class="ruby-identifier">struct_fields</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_def</span><span class="ruby-operator">|</span>
+60:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">field_def</span>[<span class="ruby-value">:default</span>].<span class="ruby-identifier">nil?</span>
+61:             <span class="ruby-identifier">fields_with_default_values</span>[<span class="ruby-identifier">field_def</span>[<span class="ruby-value">:name</span>]] = <span class="ruby-identifier">field_def</span>[<span class="ruby-value">:default</span>]
+62:           <span class="ruby-keyword kw">end</span>
+63:         <span class="ruby-keyword kw">end</span>
+64:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-value str">&quot;@fields_with_default_values&quot;</span>, <span class="ruby-identifier">fields_with_default_values</span>)
+65:       <span class="ruby-keyword kw">end</span>
+66:       <span class="ruby-identifier">fields_with_default_values</span>
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hash-method" class="method-detail ">
+				<a name="method-i-hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 144</span>
+144:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash</span>
+145:       <span class="ruby-identifier">field_values</span> = []
+146:       <span class="ruby-identifier">each_field</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_info</span><span class="ruby-operator">|</span>
+147:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:name</span>]
+148:         <span class="ruby-identifier">field_values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+149:       <span class="ruby-keyword kw">end</span>
+150:       <span class="ruby-identifier">field_values</span>.<span class="ruby-identifier">hash</span>
+151:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">(skip_optional_nulls = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/struct.rb, line 88</span>
+88:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>(<span class="ruby-identifier">skip_optional_nulls</span> = <span class="ruby-keyword kw">true</span>)
+89:       <span class="ruby-identifier">fields</span> = []
+90:       <span class="ruby-identifier">each_field</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_info</span><span class="ruby-operator">|</span>
+91:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:name</span>]
+92:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+93:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">skip_optional_nulls</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:optional</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+94:           <span class="ruby-identifier">fields</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{name}:#{value.inspect}&quot;</span>
+95:         <span class="ruby-keyword kw">end</span>
+96:       <span class="ruby-keyword kw">end</span>
+97:       <span class="ruby-node">&quot;&lt;#{self.class} #{fields.join(&quot;, &quot;)}&gt;&quot;</span>
+98:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="name-to-id-method" class="method-detail ">
+				<a name="method-i-name_to_id"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">name_to_id</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="name-to-id-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/struct.rb, line 69</span>
+69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name_to_id</span>(<span class="ruby-identifier">name</span>)
+70:       <span class="ruby-identifier">names_to_ids</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value str">&quot;@names_to_ids&quot;</span>)
+71:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">names_to_ids</span>
+72:         <span class="ruby-identifier">names_to_ids</span> = {}
+73:         <span class="ruby-identifier">struct_fields</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_def</span><span class="ruby-operator">|</span>
+74:           <span class="ruby-identifier">names_to_ids</span>[<span class="ruby-identifier">field_def</span>[<span class="ruby-value">:name</span>]] = <span class="ruby-identifier">fid</span>
+75:         <span class="ruby-keyword kw">end</span>
+76:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-value str">&quot;@names_to_ids&quot;</span>, <span class="ruby-identifier">names_to_ids</span>)
+77:       <span class="ruby-keyword kw">end</span>
+78:       <span class="ruby-identifier">names_to_ids</span>[<span class="ruby-identifier">name</span>]
+79:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-method" class="method-detail ">
+				<a name="method-i-read"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read</span><span
+						class="method-args">(iprot)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 100</span>
+100:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read</span>(<span class="ruby-identifier">iprot</span>)
+101:       <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_struct_begin</span>
+102:       <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+103:         <span class="ruby-identifier">fname</span>, <span class="ruby-identifier">ftype</span>, <span class="ruby-identifier">fid</span> = <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_field_begin</span>
+104:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">ftype</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">STOP</span>)
+105:         <span class="ruby-identifier">handle_message</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">fid</span>, <span class="ruby-identifier">ftype</span>)
+106:         <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_field_end</span>
+107:       <span class="ruby-keyword kw">end</span>
+108:       <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_struct_end</span>
+109:       <span class="ruby-identifier">validate</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-method" class="method-detail ">
+				<a name="method-i-write"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write</span><span
+						class="method-args">(oprot)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 112</span>
+112:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">oprot</span>)
+113:       <span class="ruby-identifier">validate</span>
+114:       <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_struct_begin</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>)
+115:       <span class="ruby-identifier">each_field</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fid</span>, <span class="ruby-identifier">field_info</span><span class="ruby-operator">|</span>
+116:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:name</span>]
+117:         <span class="ruby-identifier">type</span> = <span class="ruby-identifier">field_info</span>[<span class="ruby-value">:type</span>]
+118:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">value</span> = <span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>))
+119:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_container?</span> <span class="ruby-identifier">type</span>
+120:             <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_field_begin</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">fid</span>)
+121:             <span class="ruby-identifier">write_container</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">field_info</span>)
+122:             <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_field_end</span>
+123:           <span class="ruby-keyword kw">else</span>
+124:             <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_field</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">fid</span>, <span class="ruby-identifier">value</span>)
+125:           <span class="ruby-keyword kw">end</span>
+126:         <span class="ruby-keyword kw">end</span>
+127:       <span class="ruby-keyword kw">end</span>
+128:       <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_field_stop</span>
+129:       <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_struct_end</span>
+130:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="exception-initialize-method" class="method-detail ">
+				<a name="method-i-exception_initialize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exception_initialize</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exception-initialize-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 190</span>
+190:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exception_initialize</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+191:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Hash</span>
+192:         <span class="ruby-comment cmt"># looks like it's a regular Struct initialize</span>
+193:         <span class="ruby-identifier">method</span>(<span class="ruby-value">:struct_initialize</span>).<span class="ruby-identifier">call</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>)
+194:       <span class="ruby-keyword kw">else</span>
+195:         <span class="ruby-comment cmt"># call the Struct initializer first with no args</span>
+196:         <span class="ruby-comment cmt"># this will set our field default values</span>
+197:         <span class="ruby-identifier">method</span>(<span class="ruby-value">:struct_initialize</span>).<span class="ruby-identifier">call</span>()
+198:         <span class="ruby-comment cmt"># now give it to the exception</span>
+199:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:class_variable_get</span>, <span class="ruby-value">:'@@__thrift_struct_real_initialize'</span>).<span class="ruby-identifier">bind</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">call</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+200:         <span class="ruby-comment cmt"># self.class.instance_method(:initialize).bind(self).call(*args, &amp;block)</span>
+201:       <span class="ruby-keyword kw">end</span>
+202:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="field-info-method" class="method-detail ">
+				<a name="method-i-field_info"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">field_info</span><span
+						class="method-args">(field)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="field-info-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 290</span>
+290:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">field_info</span>(<span class="ruby-identifier">field</span>)
+291:       { <span class="ruby-value">:type</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>],
+292:         <span class="ruby-value">:class</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:class</span>],
+293:         <span class="ruby-value">:key</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:key</span>],
+294:         <span class="ruby-value">:value</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:value</span>],
+295:         <span class="ruby-value">:element</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>] }
+296:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-message-method" class="method-detail ">
+				<a name="method-i-handle_message"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_message</span><span
+						class="method-args">(iprot, fid, ftype)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="handle-message-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 204</span>
+204:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_message</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">fid</span>, <span class="ruby-identifier">ftype</span>)
+205:       <span class="ruby-identifier">field</span> = <span class="ruby-identifier">struct_fields</span>[<span class="ruby-identifier">fid</span>]
+206:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">field</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">ftype</span>
+207:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">read_field</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">field</span>)
+208:         <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{field[:name]}&quot;</span>, <span class="ruby-identifier">value</span>)
+209:       <span class="ruby-keyword kw">else</span>
+210:         <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">skip</span>(<span class="ruby-identifier">ftype</span>)
+211:       <span class="ruby-keyword kw">end</span>
+212:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-container--method" class="method-detail ">
+				<a name="method-i-is_container%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_container?</span><span
+						class="method-args">(type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="is-container--source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 286</span>
+286:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_container?</span>(<span class="ruby-identifier">type</span>)
+287:       <span class="ruby-constant">CONTAINER_TYPES</span>[<span class="ruby-identifier">type</span>]
+288:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-field-method" class="method-detail ">
+				<a name="method-i-read_field"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_field</span><span
+						class="method-args">(iprot, field = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-field-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 214</span>
+214:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_field</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">field</span> = {})
+215:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>]
+216:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">STRUCT</span>
+217:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">field</span>[<span class="ruby-value">:class</span>].<span class="ruby-identifier">new</span>
+218:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">iprot</span>)
+219:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">MAP</span>
+220:         <span class="ruby-identifier">key_type</span>, <span class="ruby-identifier">val_type</span>, <span class="ruby-identifier">size</span> = <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_map_begin</span>
+221:         <span class="ruby-identifier">value</span> = {}
+222:         <span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span>
+223:           <span class="ruby-identifier">k</span> = <span class="ruby-identifier">read_field</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">field_info</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:key</span>]))
+224:           <span class="ruby-identifier">v</span> = <span class="ruby-identifier">read_field</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">field_info</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:value</span>]))
+225:           <span class="ruby-identifier">value</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>
+226:         <span class="ruby-keyword kw">end</span>
+227:         <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_map_end</span>
+228:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">LIST</span>
+229:         <span class="ruby-identifier">e_type</span>, <span class="ruby-identifier">size</span> = <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_list_begin</span>
+230:         <span class="ruby-identifier">value</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+231:           <span class="ruby-identifier">read_field</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">field_info</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>]))
+232:         <span class="ruby-keyword kw">end</span>
+233:         <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_list_end</span>
+234:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">SET</span>
+235:         <span class="ruby-identifier">e_type</span>, <span class="ruby-identifier">size</span> = <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_set_begin</span>
+236:         <span class="ruby-identifier">value</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+237:         <span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span>
+238:           <span class="ruby-identifier">element</span> = <span class="ruby-identifier">read_field</span>(<span class="ruby-identifier">iprot</span>, <span class="ruby-identifier">field_info</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>]))
+239:           <span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">element</span>
+240:         <span class="ruby-keyword kw">end</span>
+241:         <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_set_end</span>
+242:       <span class="ruby-keyword kw">else</span>
+243:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">iprot</span>.<span class="ruby-identifier">read_type</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>])
+244:       <span class="ruby-keyword kw">end</span>
+245:       <span class="ruby-identifier">value</span>
+246:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-container-method" class="method-detail ">
+				<a name="method-i-write_container"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_container</span><span
+						class="method-args">(oprot, value, field = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-container-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 256</span>
+256:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_container</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">field</span> = {})
+257:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>]
+258:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">MAP</span>
+259:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_map_begin</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:key</span>][<span class="ruby-value">:type</span>], <span class="ruby-identifier">field</span>[<span class="ruby-value">:value</span>][<span class="ruby-value">:type</span>], <span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span>)
+260:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+261:           <span class="ruby-identifier">write_data</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">k</span>, <span class="ruby-identifier">field</span>[<span class="ruby-value">:key</span>])
+262:           <span class="ruby-identifier">write_data</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">field</span>[<span class="ruby-value">:value</span>])
+263:         <span class="ruby-keyword kw">end</span>
+264:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_map_end</span>
+265:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">LIST</span>
+266:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_list_begin</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>][<span class="ruby-value">:type</span>], <span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span>)
+267:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span><span class="ruby-operator">|</span>
+268:           <span class="ruby-identifier">write_data</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">elem</span>, <span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>])
+269:         <span class="ruby-keyword kw">end</span>
+270:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_list_end</span>
+271:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">SET</span>
+272:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_set_begin</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>][<span class="ruby-value">:type</span>], <span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span>)
+273:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span>,<span class="ruby-operator">|</span> <span class="ruby-comment cmt"># the , is to preserve compatibility with the old Hash-style sets</span>
+274:           <span class="ruby-identifier">write_data</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">field</span>[<span class="ruby-value">:element</span>])
+275:         <span class="ruby-keyword kw">end</span>
+276:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_set_end</span>
+277:       <span class="ruby-keyword kw">else</span>
+278:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Not a container type: #{field[:type]}&quot;</span>
+279:       <span class="ruby-keyword kw">end</span>
+280:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-data-method" class="method-detail ">
+				<a name="method-i-write_data"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_data</span><span
+						class="method-args">(oprot, value, field)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-data-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/struct.rb, line 248</span>
+248:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_data</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">field</span>)
+249:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_container?</span> <span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>]
+250:         <span class="ruby-identifier">write_container</span>(<span class="ruby-identifier">oprot</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">field</span>)
+251:       <span class="ruby-keyword kw">else</span>
+252:         <span class="ruby-identifier">oprot</span>.<span class="ruby-identifier">write_type</span>(<span class="ruby-identifier">field</span>[<span class="ruby-value">:type</span>], <span class="ruby-identifier">value</span>)
+253:       <span class="ruby-keyword kw">end</span>
+254:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

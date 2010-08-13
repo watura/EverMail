@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Thrift::MemoryBufferTransport</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../thrift/transport/memory_buffer_transport_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="thrift/transport/memory_buffer_transport.rb">thrift/transport/memory_buffer_transport.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="BaseTransport.html">Thrift::BaseTransport</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-available">#available</a></li>
+					
+					<li><a href="#method-i-close">#close</a></li>
+					
+					<li><a href="#method-i-flush">#flush</a></li>
+					
+					<li><a href="#method-i-inspect_buffer">#inspect_buffer</a></li>
+					
+					<li><a href="#method-i-open">#open</a></li>
+					
+					<li><a href="#method-i-open%3F">#open?</a></li>
+					
+					<li><a href="#method-i-peek">#peek</a></li>
+					
+					<li><a href="#method-i-read">#read</a></li>
+					
+					<li><a href="#method-i-reset_buffer">#reset_buffer</a></li>
+					
+					<li><a href="#method-i-write">#write</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Evernote.html">Evernote</a></li>
+				
+					<li><a href="../Evernote/EDAM.html">Evernote::EDAM</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error.html">Evernote::EDAM::Error</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMErrorCode.html">Evernote::EDAM::Error::EDAMErrorCode</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMNotFoundException.html">Evernote::EDAM::Error::EDAMNotFoundException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMSystemException.html">Evernote::EDAM::Error::EDAMSystemException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMUserException.html">Evernote::EDAM::Error::EDAMUserException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Limits.html">Evernote::EDAM::Limits</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore.html">Evernote::EDAM::NoteStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/AdImpressions.html">Evernote::EDAM::NoteStore::AdImpressions</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/AdParameters.html">Evernote::EDAM::NoteStore::AdParameters</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteCollectionCounts.html">Evernote::EDAM::NoteStore::NoteCollectionCounts</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteEmailParameters.html">Evernote::EDAM::NoteStore::NoteEmailParameters</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteFilter.html">Evernote::EDAM::NoteStore::NoteFilter</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteList.html">Evernote::EDAM::NoteStore::NoteList</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore.html">Evernote::EDAM::NoteStore::NoteStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/AuthenticateToSharedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::AuthenticateToSharedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/AuthenticateToSharedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::AuthenticateToSharedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/Client.html">Evernote::EDAM::NoteStore::NoteStore::Client</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CopyNote_args.html">Evernote::EDAM::NoteStore::NoteStore::CopyNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CopyNote_result.html">Evernote::EDAM::NoteStore::NoteStore::CopyNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNote_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNote_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSharedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateSharedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSharedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateSharedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateTag_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateTag_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/DeleteNote_args.html">Evernote::EDAM::NoteStore::NoteStore::DeleteNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/DeleteNote_result.html">Evernote::EDAM::NoteStore::NoteStore::DeleteNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/EmailNote_args.html">Evernote::EDAM::NoteStore::NoteStore::EmailNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/EmailNote_result.html">Evernote::EDAM::NoteStore::NoteStore::EmailNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeInactiveNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeInactiveNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeInactiveNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeInactiveNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNote_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNote_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSharedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSharedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSharedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSharedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeTag_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeTag_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNoteCounts_args.html">Evernote::EDAM::NoteStore::NoteStore::FindNoteCounts_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNoteCounts_result.html">Evernote::EDAM::NoteStore::NoteStore::FindNoteCounts_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::FindNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::FindNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAccountSize_args.html">Evernote::EDAM::NoteStore::NoteStore::GetAccountSize_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAccountSize_result.html">Evernote::EDAM::NoteStore::NoteStore::GetAccountSize_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAds_args.html">Evernote::EDAM::NoteStore::NoteStore::GetAds_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAds_result.html">Evernote::EDAM::NoteStore::NoteStore::GetAds_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetDefaultNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetDefaultNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetDefaultNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetDefaultNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteContent_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteContent_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteContent_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteContent_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteSearchText_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteSearchText_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteSearchText_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteSearchText_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteTagNames_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteTagNames_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteTagNames_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteTagNames_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteVersion_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteVersion_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteVersion_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteVersion_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNote_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNote_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetPublicNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetPublicNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetPublicNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetPublicNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetRandomAd_args.html">Evernote::EDAM::NoteStore::NoteStore::GetRandomAd_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetRandomAd_result.html">Evernote::EDAM::NoteStore::NoteStore::GetRandomAd_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAlternateData_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAlternateData_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAlternateData_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAlternateData_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAttributes_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAttributes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAttributes_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAttributes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceByHash_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceByHash_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceByHash_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceByHash_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceData_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceData_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceData_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceData_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceRecognition_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceRecognition_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceRecognition_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceRecognition_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResource_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResource_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResource_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResource_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSharedNotebookByAuth_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSharedNotebookByAuth_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSharedNotebookByAuth_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSharedNotebookByAuth_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncChunk_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncChunk_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncChunk_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncChunk_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncState_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncState_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncState_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncState_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetTag_args.html">Evernote::EDAM::NoteStore::NoteStore::GetTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetTag_result.html">Evernote::EDAM::NoteStore::NoteStore::GetTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListLinkedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListLinkedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListLinkedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListLinkedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNoteVersions_args.html">Evernote::EDAM::NoteStore::NoteStore::ListNoteVersions_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNoteVersions_result.html">Evernote::EDAM::NoteStore::NoteStore::ListNoteVersions_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSearches_args.html">Evernote::EDAM::NoteStore::NoteStore::ListSearches_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSearches_result.html">Evernote::EDAM::NoteStore::NoteStore::ListSearches_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSharedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListSharedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSharedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListSharedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTagsByNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ListTagsByNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTagsByNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ListTagsByNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTags_args.html">Evernote::EDAM::NoteStore::NoteStore::ListTags_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTags_result.html">Evernote::EDAM::NoteStore::NoteStore::ListTags_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/Processor.html">Evernote::EDAM::NoteStore::NoteStore::Processor</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UntagAll_args.html">Evernote::EDAM::NoteStore::NoteStore::UntagAll_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UntagAll_result.html">Evernote::EDAM::NoteStore::NoteStore::UntagAll_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNote_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNote_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateResource_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateResource_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateResource_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateResource_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateTag_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateTag_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteVersionId.html">Evernote::EDAM::NoteStore::NoteVersionId</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/SyncChunk.html">Evernote::EDAM::NoteStore::SyncChunk</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/SyncState.html">Evernote::EDAM::NoteStore::SyncState</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type.html">Evernote::EDAM::Type</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Accounting.html">Evernote::EDAM::Type::Accounting</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Ad.html">Evernote::EDAM::Type::Ad</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Data.html">Evernote::EDAM::Type::Data</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/LinkedNotebook.html">Evernote::EDAM::Type::LinkedNotebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Note.html">Evernote::EDAM::Type::Note</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/NoteAttributes.html">Evernote::EDAM::Type::NoteAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/NoteSortOrder.html">Evernote::EDAM::Type::NoteSortOrder</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Notebook.html">Evernote::EDAM::Type::Notebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/PremiumOrderStatus.html">Evernote::EDAM::Type::PremiumOrderStatus</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/PrivilegeLevel.html">Evernote::EDAM::Type::PrivilegeLevel</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Publishing.html">Evernote::EDAM::Type::Publishing</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/QueryFormat.html">Evernote::EDAM::Type::QueryFormat</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Resource.html">Evernote::EDAM::Type::Resource</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/ResourceAttributes.html">Evernote::EDAM::Type::ResourceAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/SavedSearch.html">Evernote::EDAM::Type::SavedSearch</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/SharedNotebook.html">Evernote::EDAM::Type::SharedNotebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Tag.html">Evernote::EDAM::Type::Tag</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/User.html">Evernote::EDAM::Type::User</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/UserAttributes.html">Evernote::EDAM::Type::UserAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore.html">Evernote::EDAM::UserStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/AuthenticationResult.html">Evernote::EDAM::UserStore::AuthenticationResult</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/PublicUserInfo.html">Evernote::EDAM::UserStore::PublicUserInfo</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore.html">Evernote::EDAM::UserStore::UserStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Authenticate_args.html">Evernote::EDAM::UserStore::UserStore::Authenticate_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Authenticate_result.html">Evernote::EDAM::UserStore::UserStore::Authenticate_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/CheckVersion_args.html">Evernote::EDAM::UserStore::UserStore::CheckVersion_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/CheckVersion_result.html">Evernote::EDAM::UserStore::UserStore::CheckVersion_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Client.html">Evernote::EDAM::UserStore::UserStore::Client</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetPublicUserInfo_args.html">Evernote::EDAM::UserStore::UserStore::GetPublicUserInfo_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetPublicUserInfo_result.html">Evernote::EDAM::UserStore::UserStore::GetPublicUserInfo_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetUser_args.html">Evernote::EDAM::UserStore::UserStore::GetUser_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetUser_result.html">Evernote::EDAM::UserStore::UserStore::GetUser_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Processor.html">Evernote::EDAM::UserStore::UserStore::Processor</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/RefreshAuthentication_args.html">Evernote::EDAM::UserStore::UserStore::RefreshAuthentication_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/RefreshAuthentication_result.html">Evernote::EDAM::UserStore::UserStore::RefreshAuthentication_result</a></li>
+				
+					<li><a href="../Thrift.html">Thrift</a></li>
+				
+					<li><a href="../Thrift/ApplicationException.html">Thrift::ApplicationException</a></li>
+				
+					<li><a href="../Thrift/BaseProtocol.html">Thrift::BaseProtocol</a></li>
+				
+					<li><a href="../Thrift/BaseProtocolFactory.html">Thrift::BaseProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/BaseServer.html">Thrift::BaseServer</a></li>
+				
+					<li><a href="../Thrift/BaseServerTransport.html">Thrift::BaseServerTransport</a></li>
+				
+					<li><a href="../Thrift/BaseTransport.html">Thrift::BaseTransport</a></li>
+				
+					<li><a href="../Thrift/BaseTransportFactory.html">Thrift::BaseTransportFactory</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocol.html">Thrift::BinaryProtocol</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocolAcceleratedFactory.html">Thrift::BinaryProtocolAcceleratedFactory</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocolFactory.html">Thrift::BinaryProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/BufferedTransport.html">Thrift::BufferedTransport</a></li>
+				
+					<li><a href="../Thrift/BufferedTransportFactory.html">Thrift::BufferedTransportFactory</a></li>
+				
+					<li><a href="../Thrift/Client.html">Thrift::Client</a></li>
+				
+					<li><a href="../Thrift/CompactProtocol.html">Thrift::CompactProtocol</a></li>
+				
+					<li><a href="../Thrift/CompactProtocol/CompactTypes.html">Thrift::CompactProtocol::CompactTypes</a></li>
+				
+					<li><a href="../Thrift/CompactProtocolFactory.html">Thrift::CompactProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/Deserializer.html">Thrift::Deserializer</a></li>
+				
+					<li><a href="../Thrift/Exception.html">Thrift::Exception</a></li>
+				
+					<li><a href="../Thrift/FramedTransport.html">Thrift::FramedTransport</a></li>
+				
+					<li><a href="../Thrift/FramedTransportFactory.html">Thrift::FramedTransportFactory</a></li>
+				
+					<li><a href="../Thrift/HTTPClientTransport.html">Thrift::HTTPClientTransport</a></li>
+				
+					<li><a href="../Thrift/IOStreamTransport.html">Thrift::IOStreamTransport</a></li>
+				
+					<li><a href="../Thrift/MemoryBufferTransport.html">Thrift::MemoryBufferTransport</a></li>
+				
+					<li><a href="../Thrift/MessageTypes.html">Thrift::MessageTypes</a></li>
+				
+					<li><a href="../Thrift/MongrelHTTPServer.html">Thrift::MongrelHTTPServer</a></li>
+				
+					<li><a href="../Thrift/MongrelHTTPServer/Handler.html">Thrift::MongrelHTTPServer::Handler</a></li>
+				
+					<li><a href="../Thrift/NonblockingServer.html">Thrift::NonblockingServer</a></li>
+				
+					<li><a href="../Thrift/Processor.html">Thrift::Processor</a></li>
+				
+					<li><a href="../Thrift/ProtocolException.html">Thrift::ProtocolException</a></li>
+				
+					<li><a href="../Thrift/Serializer.html">Thrift::Serializer</a></li>
+				
+					<li><a href="../Thrift/ServerSocket.html">Thrift::ServerSocket</a></li>
+				
+					<li><a href="../Thrift/SimpleServer.html">Thrift::SimpleServer</a></li>
+				
+					<li><a href="../Thrift/Socket.html">Thrift::Socket</a></li>
+				
+					<li><a href="../Thrift/Struct.html">Thrift::Struct</a></li>
+				
+					<li><a href="../Thrift/ThreadPoolServer.html">Thrift::ThreadPoolServer</a></li>
+				
+					<li><a href="../Thrift/ThreadedServer.html">Thrift::ThreadedServer</a></li>
+				
+					<li><a href="../Thrift/TransportException.html">Thrift::TransportException</a></li>
+				
+					<li><a href="../Thrift/TypeError.html">Thrift::TypeError</a></li>
+				
+					<li><a href="../Thrift/Types.html">Thrift::Types</a></li>
+				
+					<li><a href="../Thrift/UNIXServerSocket.html">Thrift::UNIXServerSocket</a></li>
+				
+					<li><a href="../Thrift/UNIXSocket.html">Thrift::UNIXSocket</a></li>
+				
+					<li><a href="../Fixnum.html">Fixnum</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Thrift::MemoryBufferTransport</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="GARBAGE_BUFFER_SIZE">GARBAGE_BUFFER_SIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(buffer = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+If you pass a string to this, you should # that string unless you want it
+to be modified by <a href="MemoryBufferTransport.html#method-i-read">#</a>
+and <a href="MemoryBufferTransport.html#method-i-write">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">buffer</span> = <span class="ruby-keyword kw">nil</span>)
+31:       <span class="ruby-ivar">@buf</span> = <span class="ruby-identifier">buffer</span> <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>
+32:       <span class="ruby-ivar">@index</span> = <span class="ruby-value">0</span>
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="available-method" class="method-detail ">
+				<a name="method-i-available"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">available</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="available-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 55</span>
+55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">available</span>
+56:       <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@index</span>
+57:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="method-i-close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 42</span>
+42:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+43:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flush-method" class="method-detail ">
+				<a name="method-i-flush"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flush</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="flush-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 77</span>
+77:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flush</span>
+78:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-buffer-method" class="method-detail ">
+				<a name="method-i-inspect_buffer"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect_buffer</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-buffer-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect_buffer</span>
+81:       <span class="ruby-identifier">out</span> = []
+82:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">idx</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span>(<span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">size</span>)
+83:         <span class="ruby-comment cmt"># if idx != 0</span>
+84:         <span class="ruby-comment cmt">#   out &lt;&lt; &quot; &quot;</span>
+85:         <span class="ruby-comment cmt"># end</span>
+86:       
+87:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@index</span>
+88:           <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;&gt;&quot;</span>
+89:         <span class="ruby-keyword kw">end</span>
+90:       
+91:         <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@buf</span>[<span class="ruby-identifier">idx</span>].<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>)
+92:       <span class="ruby-keyword kw">end</span>
+93:       <span class="ruby-identifier">out</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; &quot;</span>)
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="open-method" class="method-detail ">
+				<a name="method-i-open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="open-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 39</span>
+39:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open</span>
+40:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="open--method" class="method-detail ">
+				<a name="method-i-open%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="open--source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open?</span>
+36:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="peek-method" class="method-detail ">
+				<a name="method-i-peek"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">peek</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="peek-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 45</span>
+45:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">peek</span>
+46:       <span class="ruby-ivar">@index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">size</span>
+47:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-method" class="method-detail ">
+				<a name="method-i-read"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read</span><span
+						class="method-args">(len)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 59</span>
+59:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read</span>(<span class="ruby-identifier">len</span>)
+60:       <span class="ruby-identifier">data</span> = <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-ivar">@index</span>, <span class="ruby-identifier">len</span>)
+61:       <span class="ruby-ivar">@index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">len</span>
+62:       <span class="ruby-ivar">@index</span> = <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">size</span>
+63:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@index</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">GARBAGE_BUFFER_SIZE</span>
+64:         <span class="ruby-ivar">@buf</span> = <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-ivar">@index</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>)
+65:         <span class="ruby-ivar">@index</span> = <span class="ruby-value">0</span>
+66:       <span class="ruby-keyword kw">end</span>
+67:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">data</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">len</span>
+68:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-value str">&quot;Not enough bytes remain in buffer&quot;</span>
+69:       <span class="ruby-keyword kw">end</span>
+70:       <span class="ruby-identifier">data</span>
+71:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reset-buffer-method" class="method-detail ">
+				<a name="method-i-reset_buffer"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reset_buffer</span><span
+						class="method-args">(new_buf = '')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+this method does not use the passed object directly but copies it
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reset-buffer-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 50</span>
+50:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset_buffer</span>(<span class="ruby-identifier">new_buf</span> = <span class="ruby-value str">''</span>)
+51:       <span class="ruby-ivar">@buf</span>.<span class="ruby-identifier">replace</span> <span class="ruby-identifier">new_buf</span>
+52:       <span class="ruby-ivar">@index</span> = <span class="ruby-value">0</span>
+53:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-method" class="method-detail ">
+				<a name="method-i-write"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write</span><span
+						class="method-args">(wbuf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/transport/memory_buffer_transport.rb, line 73</span>
+73:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">wbuf</span>)
+74:       <span class="ruby-ivar">@buf</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">wbuf</span>
+75:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

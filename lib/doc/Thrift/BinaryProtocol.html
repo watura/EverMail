@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Thrift::BinaryProtocol</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../thrift/protocol/binary_protocol_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="thrift/protocol/binary_protocol.rb">thrift/protocol/binary_protocol.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="BaseProtocol.html">Thrift::BaseProtocol</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-read_bool">#read_bool</a></li>
+					
+					<li><a href="#method-i-read_byte">#read_byte</a></li>
+					
+					<li><a href="#method-i-read_double">#read_double</a></li>
+					
+					<li><a href="#method-i-read_field_begin">#read_field_begin</a></li>
+					
+					<li><a href="#method-i-read_i16">#read_i16</a></li>
+					
+					<li><a href="#method-i-read_i32">#read_i32</a></li>
+					
+					<li><a href="#method-i-read_i64">#read_i64</a></li>
+					
+					<li><a href="#method-i-read_list_begin">#read_list_begin</a></li>
+					
+					<li><a href="#method-i-read_map_begin">#read_map_begin</a></li>
+					
+					<li><a href="#method-i-read_message_begin">#read_message_begin</a></li>
+					
+					<li><a href="#method-i-read_set_begin">#read_set_begin</a></li>
+					
+					<li><a href="#method-i-read_string">#read_string</a></li>
+					
+					<li><a href="#method-i-read_struct_begin">#read_struct_begin</a></li>
+					
+					<li><a href="#method-i-write_bool">#write_bool</a></li>
+					
+					<li><a href="#method-i-write_byte">#write_byte</a></li>
+					
+					<li><a href="#method-i-write_double">#write_double</a></li>
+					
+					<li><a href="#method-i-write_field_begin">#write_field_begin</a></li>
+					
+					<li><a href="#method-i-write_field_stop">#write_field_stop</a></li>
+					
+					<li><a href="#method-i-write_i16">#write_i16</a></li>
+					
+					<li><a href="#method-i-write_i32">#write_i32</a></li>
+					
+					<li><a href="#method-i-write_i64">#write_i64</a></li>
+					
+					<li><a href="#method-i-write_list_begin">#write_list_begin</a></li>
+					
+					<li><a href="#method-i-write_map_begin">#write_map_begin</a></li>
+					
+					<li><a href="#method-i-write_message_begin">#write_message_begin</a></li>
+					
+					<li><a href="#method-i-write_set_begin">#write_set_begin</a></li>
+					
+					<li><a href="#method-i-write_string">#write_string</a></li>
+					
+					<li><a href="#method-i-write_struct_begin">#write_struct_begin</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Evernote.html">Evernote</a></li>
+				
+					<li><a href="../Evernote/EDAM.html">Evernote::EDAM</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error.html">Evernote::EDAM::Error</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMErrorCode.html">Evernote::EDAM::Error::EDAMErrorCode</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMNotFoundException.html">Evernote::EDAM::Error::EDAMNotFoundException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMSystemException.html">Evernote::EDAM::Error::EDAMSystemException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Error/EDAMUserException.html">Evernote::EDAM::Error::EDAMUserException</a></li>
+				
+					<li><a href="../Evernote/EDAM/Limits.html">Evernote::EDAM::Limits</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore.html">Evernote::EDAM::NoteStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/AdImpressions.html">Evernote::EDAM::NoteStore::AdImpressions</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/AdParameters.html">Evernote::EDAM::NoteStore::AdParameters</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteCollectionCounts.html">Evernote::EDAM::NoteStore::NoteCollectionCounts</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteEmailParameters.html">Evernote::EDAM::NoteStore::NoteEmailParameters</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteFilter.html">Evernote::EDAM::NoteStore::NoteFilter</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteList.html">Evernote::EDAM::NoteStore::NoteList</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore.html">Evernote::EDAM::NoteStore::NoteStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/AuthenticateToSharedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::AuthenticateToSharedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/AuthenticateToSharedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::AuthenticateToSharedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/Client.html">Evernote::EDAM::NoteStore::NoteStore::Client</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CopyNote_args.html">Evernote::EDAM::NoteStore::NoteStore::CopyNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CopyNote_result.html">Evernote::EDAM::NoteStore::NoteStore::CopyNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNote_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNote_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSharedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateSharedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateSharedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateSharedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateTag_args.html">Evernote::EDAM::NoteStore::NoteStore::CreateTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/CreateTag_result.html">Evernote::EDAM::NoteStore::NoteStore::CreateTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/DeleteNote_args.html">Evernote::EDAM::NoteStore::NoteStore::DeleteNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/DeleteNote_result.html">Evernote::EDAM::NoteStore::NoteStore::DeleteNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/EmailNote_args.html">Evernote::EDAM::NoteStore::NoteStore::EmailNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/EmailNote_result.html">Evernote::EDAM::NoteStore::NoteStore::EmailNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeInactiveNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeInactiveNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeInactiveNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeInactiveNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNote_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNote_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSharedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSharedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeSharedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeSharedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeTag_args.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ExpungeTag_result.html">Evernote::EDAM::NoteStore::NoteStore::ExpungeTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNoteCounts_args.html">Evernote::EDAM::NoteStore::NoteStore::FindNoteCounts_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNoteCounts_result.html">Evernote::EDAM::NoteStore::NoteStore::FindNoteCounts_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNotes_args.html">Evernote::EDAM::NoteStore::NoteStore::FindNotes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/FindNotes_result.html">Evernote::EDAM::NoteStore::NoteStore::FindNotes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAccountSize_args.html">Evernote::EDAM::NoteStore::NoteStore::GetAccountSize_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAccountSize_result.html">Evernote::EDAM::NoteStore::NoteStore::GetAccountSize_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAds_args.html">Evernote::EDAM::NoteStore::NoteStore::GetAds_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetAds_result.html">Evernote::EDAM::NoteStore::NoteStore::GetAds_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetDefaultNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetDefaultNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetDefaultNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetDefaultNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteContent_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteContent_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteContent_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteContent_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteSearchText_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteSearchText_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteSearchText_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteSearchText_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteTagNames_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteTagNames_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteTagNames_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteTagNames_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteVersion_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteVersion_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNoteVersion_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNoteVersion_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNote_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNote_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetPublicNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::GetPublicNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetPublicNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::GetPublicNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetRandomAd_args.html">Evernote::EDAM::NoteStore::NoteStore::GetRandomAd_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetRandomAd_result.html">Evernote::EDAM::NoteStore::NoteStore::GetRandomAd_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAlternateData_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAlternateData_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAlternateData_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAlternateData_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAttributes_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAttributes_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceAttributes_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceAttributes_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceByHash_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceByHash_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceByHash_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceByHash_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceData_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceData_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceData_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceData_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceRecognition_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceRecognition_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResourceRecognition_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResourceRecognition_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResource_args.html">Evernote::EDAM::NoteStore::NoteStore::GetResource_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetResource_result.html">Evernote::EDAM::NoteStore::NoteStore::GetResource_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSharedNotebookByAuth_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSharedNotebookByAuth_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSharedNotebookByAuth_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSharedNotebookByAuth_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncChunk_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncChunk_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncChunk_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncChunk_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncState_args.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncState_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetSyncState_result.html">Evernote::EDAM::NoteStore::NoteStore::GetSyncState_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetTag_args.html">Evernote::EDAM::NoteStore::NoteStore::GetTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/GetTag_result.html">Evernote::EDAM::NoteStore::NoteStore::GetTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListLinkedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListLinkedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListLinkedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListLinkedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNoteVersions_args.html">Evernote::EDAM::NoteStore::NoteStore::ListNoteVersions_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNoteVersions_result.html">Evernote::EDAM::NoteStore::NoteStore::ListNoteVersions_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSearches_args.html">Evernote::EDAM::NoteStore::NoteStore::ListSearches_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSearches_result.html">Evernote::EDAM::NoteStore::NoteStore::ListSearches_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSharedNotebooks_args.html">Evernote::EDAM::NoteStore::NoteStore::ListSharedNotebooks_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListSharedNotebooks_result.html">Evernote::EDAM::NoteStore::NoteStore::ListSharedNotebooks_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTagsByNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::ListTagsByNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTagsByNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::ListTagsByNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTags_args.html">Evernote::EDAM::NoteStore::NoteStore::ListTags_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/ListTags_result.html">Evernote::EDAM::NoteStore::NoteStore::ListTags_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/Processor.html">Evernote::EDAM::NoteStore::NoteStore::Processor</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UntagAll_args.html">Evernote::EDAM::NoteStore::NoteStore::UntagAll_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UntagAll_result.html">Evernote::EDAM::NoteStore::NoteStore::UntagAll_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateLinkedNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateLinkedNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateLinkedNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateLinkedNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNote_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNote_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNote_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNote_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNotebook_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNotebook_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateNotebook_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateNotebook_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateResource_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateResource_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateResource_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateResource_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateSearch_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateSearch_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateSearch_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateSearch_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateTag_args.html">Evernote::EDAM::NoteStore::NoteStore::UpdateTag_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteStore/UpdateTag_result.html">Evernote::EDAM::NoteStore::NoteStore::UpdateTag_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/NoteVersionId.html">Evernote::EDAM::NoteStore::NoteVersionId</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/SyncChunk.html">Evernote::EDAM::NoteStore::SyncChunk</a></li>
+				
+					<li><a href="../Evernote/EDAM/NoteStore/SyncState.html">Evernote::EDAM::NoteStore::SyncState</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type.html">Evernote::EDAM::Type</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Accounting.html">Evernote::EDAM::Type::Accounting</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Ad.html">Evernote::EDAM::Type::Ad</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Data.html">Evernote::EDAM::Type::Data</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/LinkedNotebook.html">Evernote::EDAM::Type::LinkedNotebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Note.html">Evernote::EDAM::Type::Note</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/NoteAttributes.html">Evernote::EDAM::Type::NoteAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/NoteSortOrder.html">Evernote::EDAM::Type::NoteSortOrder</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Notebook.html">Evernote::EDAM::Type::Notebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/PremiumOrderStatus.html">Evernote::EDAM::Type::PremiumOrderStatus</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/PrivilegeLevel.html">Evernote::EDAM::Type::PrivilegeLevel</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Publishing.html">Evernote::EDAM::Type::Publishing</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/QueryFormat.html">Evernote::EDAM::Type::QueryFormat</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Resource.html">Evernote::EDAM::Type::Resource</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/ResourceAttributes.html">Evernote::EDAM::Type::ResourceAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/SavedSearch.html">Evernote::EDAM::Type::SavedSearch</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/SharedNotebook.html">Evernote::EDAM::Type::SharedNotebook</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/Tag.html">Evernote::EDAM::Type::Tag</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/User.html">Evernote::EDAM::Type::User</a></li>
+				
+					<li><a href="../Evernote/EDAM/Type/UserAttributes.html">Evernote::EDAM::Type::UserAttributes</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore.html">Evernote::EDAM::UserStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/AuthenticationResult.html">Evernote::EDAM::UserStore::AuthenticationResult</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/PublicUserInfo.html">Evernote::EDAM::UserStore::PublicUserInfo</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore.html">Evernote::EDAM::UserStore::UserStore</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Authenticate_args.html">Evernote::EDAM::UserStore::UserStore::Authenticate_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Authenticate_result.html">Evernote::EDAM::UserStore::UserStore::Authenticate_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/CheckVersion_args.html">Evernote::EDAM::UserStore::UserStore::CheckVersion_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/CheckVersion_result.html">Evernote::EDAM::UserStore::UserStore::CheckVersion_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Client.html">Evernote::EDAM::UserStore::UserStore::Client</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetPublicUserInfo_args.html">Evernote::EDAM::UserStore::UserStore::GetPublicUserInfo_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetPublicUserInfo_result.html">Evernote::EDAM::UserStore::UserStore::GetPublicUserInfo_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetUser_args.html">Evernote::EDAM::UserStore::UserStore::GetUser_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/GetUser_result.html">Evernote::EDAM::UserStore::UserStore::GetUser_result</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/Processor.html">Evernote::EDAM::UserStore::UserStore::Processor</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/RefreshAuthentication_args.html">Evernote::EDAM::UserStore::UserStore::RefreshAuthentication_args</a></li>
+				
+					<li><a href="../Evernote/EDAM/UserStore/UserStore/RefreshAuthentication_result.html">Evernote::EDAM::UserStore::UserStore::RefreshAuthentication_result</a></li>
+				
+					<li><a href="../Thrift.html">Thrift</a></li>
+				
+					<li><a href="../Thrift/ApplicationException.html">Thrift::ApplicationException</a></li>
+				
+					<li><a href="../Thrift/BaseProtocol.html">Thrift::BaseProtocol</a></li>
+				
+					<li><a href="../Thrift/BaseProtocolFactory.html">Thrift::BaseProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/BaseServer.html">Thrift::BaseServer</a></li>
+				
+					<li><a href="../Thrift/BaseServerTransport.html">Thrift::BaseServerTransport</a></li>
+				
+					<li><a href="../Thrift/BaseTransport.html">Thrift::BaseTransport</a></li>
+				
+					<li><a href="../Thrift/BaseTransportFactory.html">Thrift::BaseTransportFactory</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocol.html">Thrift::BinaryProtocol</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocolAcceleratedFactory.html">Thrift::BinaryProtocolAcceleratedFactory</a></li>
+				
+					<li><a href="../Thrift/BinaryProtocolFactory.html">Thrift::BinaryProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/BufferedTransport.html">Thrift::BufferedTransport</a></li>
+				
+					<li><a href="../Thrift/BufferedTransportFactory.html">Thrift::BufferedTransportFactory</a></li>
+				
+					<li><a href="../Thrift/Client.html">Thrift::Client</a></li>
+				
+					<li><a href="../Thrift/CompactProtocol.html">Thrift::CompactProtocol</a></li>
+				
+					<li><a href="../Thrift/CompactProtocol/CompactTypes.html">Thrift::CompactProtocol::CompactTypes</a></li>
+				
+					<li><a href="../Thrift/CompactProtocolFactory.html">Thrift::CompactProtocolFactory</a></li>
+				
+					<li><a href="../Thrift/Deserializer.html">Thrift::Deserializer</a></li>
+				
+					<li><a href="../Thrift/Exception.html">Thrift::Exception</a></li>
+				
+					<li><a href="../Thrift/FramedTransport.html">Thrift::FramedTransport</a></li>
+				
+					<li><a href="../Thrift/FramedTransportFactory.html">Thrift::FramedTransportFactory</a></li>
+				
+					<li><a href="../Thrift/HTTPClientTransport.html">Thrift::HTTPClientTransport</a></li>
+				
+					<li><a href="../Thrift/IOStreamTransport.html">Thrift::IOStreamTransport</a></li>
+				
+					<li><a href="../Thrift/MemoryBufferTransport.html">Thrift::MemoryBufferTransport</a></li>
+				
+					<li><a href="../Thrift/MessageTypes.html">Thrift::MessageTypes</a></li>
+				
+					<li><a href="../Thrift/MongrelHTTPServer.html">Thrift::MongrelHTTPServer</a></li>
+				
+					<li><a href="../Thrift/MongrelHTTPServer/Handler.html">Thrift::MongrelHTTPServer::Handler</a></li>
+				
+					<li><a href="../Thrift/NonblockingServer.html">Thrift::NonblockingServer</a></li>
+				
+					<li><a href="../Thrift/Processor.html">Thrift::Processor</a></li>
+				
+					<li><a href="../Thrift/ProtocolException.html">Thrift::ProtocolException</a></li>
+				
+					<li><a href="../Thrift/Serializer.html">Thrift::Serializer</a></li>
+				
+					<li><a href="../Thrift/ServerSocket.html">Thrift::ServerSocket</a></li>
+				
+					<li><a href="../Thrift/SimpleServer.html">Thrift::SimpleServer</a></li>
+				
+					<li><a href="../Thrift/Socket.html">Thrift::Socket</a></li>
+				
+					<li><a href="../Thrift/Struct.html">Thrift::Struct</a></li>
+				
+					<li><a href="../Thrift/ThreadPoolServer.html">Thrift::ThreadPoolServer</a></li>
+				
+					<li><a href="../Thrift/ThreadedServer.html">Thrift::ThreadedServer</a></li>
+				
+					<li><a href="../Thrift/TransportException.html">Thrift::TransportException</a></li>
+				
+					<li><a href="../Thrift/TypeError.html">Thrift::TypeError</a></li>
+				
+					<li><a href="../Thrift/Types.html">Thrift::Types</a></li>
+				
+					<li><a href="../Thrift/UNIXServerSocket.html">Thrift::UNIXServerSocket</a></li>
+				
+					<li><a href="../Thrift/UNIXSocket.html">Thrift::UNIXSocket</a></li>
+				
+					<li><a href="../Fixnum.html">Fixnum</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Thrift::BinaryProtocol</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="VERSION_MASK">VERSION_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VERSION_1">VERSION_1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TYPE_MASK">TYPE_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="strict-read-attribute-method" class="method-detail">
+				<a name="strict_read"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">strict_read</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="strict-write-attribute-method" class="method-detail">
+				<a name="strict_write"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">strict_write</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(trans, strict_read=true, strict_write=true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 28</span>
+28:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">trans</span>, <span class="ruby-identifier">strict_read</span>=<span class="ruby-keyword kw">true</span>, <span class="ruby-identifier">strict_write</span>=<span class="ruby-keyword kw">true</span>)
+29:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">trans</span>)
+30:       <span class="ruby-ivar">@strict_read</span> = <span class="ruby-identifier">strict_read</span>
+31:       <span class="ruby-ivar">@strict_write</span> = <span class="ruby-identifier">strict_write</span>
+32:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="read-bool-method" class="method-detail ">
+				<a name="method-i-read_bool"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_bool</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-bool-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 162</span>
+162:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_bool</span>
+163:       <span class="ruby-identifier">byte</span> = <span class="ruby-identifier">read_byte</span>
+164:       <span class="ruby-identifier">byte</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+165:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-byte-method" class="method-detail ">
+				<a name="method-i-read_byte"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_byte</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-byte-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 167</span>
+167:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_byte</span>
+168:       <span class="ruby-identifier">dat</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-value">1</span>)
+169:       <span class="ruby-identifier">val</span> = <span class="ruby-identifier">dat</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">ord</span>
+170:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0x7f</span>)
+171:         <span class="ruby-identifier">val</span> = <span class="ruby-value">0</span> <span class="ruby-operator">-</span> ((<span class="ruby-identifier">val</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">^</span> <span class="ruby-value">0xff</span>)
+172:       <span class="ruby-keyword kw">end</span>
+173:       <span class="ruby-identifier">val</span>
+174:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-double-method" class="method-detail ">
+				<a name="method-i-read_double"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_double</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-double-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 206</span>
+206:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_double</span>
+207:       <span class="ruby-identifier">dat</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-value">8</span>)
+208:       <span class="ruby-identifier">val</span> = <span class="ruby-identifier">dat</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'G'</span>).<span class="ruby-identifier">first</span>
+209:       <span class="ruby-identifier">val</span>
+210:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-field-begin-method" class="method-detail ">
+				<a name="method-i-read_field_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_field_begin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-field-begin-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 133</span>
+133:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_field_begin</span>
+134:       <span class="ruby-identifier">type</span> = <span class="ruby-identifier">read_byte</span>
+135:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">STOP</span>)
+136:         [<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">type</span>, <span class="ruby-value">0</span>]
+137:       <span class="ruby-keyword kw">else</span>
+138:         <span class="ruby-identifier">id</span> = <span class="ruby-identifier">read_i16</span>
+139:         [<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">id</span>]
+140:       <span class="ruby-keyword kw">end</span>
+141:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-i--method" class="method-detail ">
+				<a name="method-i-read_i16"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_i16</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-i--source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 176</span>
+176:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_i16</span>
+177:       <span class="ruby-identifier">dat</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-value">2</span>)
+178:       <span class="ruby-identifier">val</span>, = <span class="ruby-identifier">dat</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'n'</span>)
+179:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0x7fff</span>)
+180:         <span class="ruby-identifier">val</span> = <span class="ruby-value">0</span> <span class="ruby-operator">-</span> ((<span class="ruby-identifier">val</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">^</span> <span class="ruby-value">0xffff</span>)
+181:       <span class="ruby-keyword kw">end</span>
+182:       <span class="ruby-identifier">val</span>
+183:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-i--method" class="method-detail ">
+				<a name="method-i-read_i32"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_i32</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-i--source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 185</span>
+185:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_i32</span>
+186:       <span class="ruby-identifier">dat</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-value">4</span>)
+187:       <span class="ruby-identifier">val</span>, = <span class="ruby-identifier">dat</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'N'</span>)
+188:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">val</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0x7fffffff</span>)
+189:         <span class="ruby-identifier">val</span> = <span class="ruby-value">0</span> <span class="ruby-operator">-</span> ((<span class="ruby-identifier">val</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">^</span> <span class="ruby-value">0xffffffff</span>)
+190:       <span class="ruby-keyword kw">end</span>
+191:       <span class="ruby-identifier">val</span>
+192:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-i--method" class="method-detail ">
+				<a name="method-i-read_i64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_i64</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-i--source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 194</span>
+194:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_i64</span>
+195:       <span class="ruby-identifier">dat</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-value">8</span>)
+196:       <span class="ruby-identifier">hi</span>, <span class="ruby-identifier">lo</span> = <span class="ruby-identifier">dat</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'N2'</span>)
+197:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">hi</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0x7fffffff</span>)
+198:         <span class="ruby-identifier">hi</span> <span class="ruby-operator">^=</span> <span class="ruby-value">0xffffffff</span>
+199:         <span class="ruby-identifier">lo</span> <span class="ruby-operator">^=</span> <span class="ruby-value">0xffffffff</span>
+200:         <span class="ruby-value">0</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">hi</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">32</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">lo</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+201:       <span class="ruby-keyword kw">else</span>
+202:         (<span class="ruby-identifier">hi</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">32</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">lo</span>
+203:       <span class="ruby-keyword kw">end</span>
+204:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-list-begin-method" class="method-detail ">
+				<a name="method-i-read_list_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_list_begin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-list-begin-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_list_begin</span>
+151:       <span class="ruby-identifier">etype</span> = <span class="ruby-identifier">read_byte</span>
+152:       <span class="ruby-identifier">size</span> = <span class="ruby-identifier">read_i32</span>
+153:       [<span class="ruby-identifier">etype</span>, <span class="ruby-identifier">size</span>]
+154:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-map-begin-method" class="method-detail ">
+				<a name="method-i-read_map_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_map_begin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-map-begin-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 143</span>
+143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_map_begin</span>
+144:       <span class="ruby-identifier">ktype</span> = <span class="ruby-identifier">read_byte</span>
+145:       <span class="ruby-identifier">vtype</span> = <span class="ruby-identifier">read_byte</span>
+146:       <span class="ruby-identifier">size</span> = <span class="ruby-identifier">read_i32</span>
+147:       [<span class="ruby-identifier">ktype</span>, <span class="ruby-identifier">vtype</span>, <span class="ruby-identifier">size</span>]
+148:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-message-begin-method" class="method-detail ">
+				<a name="method-i-read_message_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_message_begin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-message-begin-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 110</span>
+110:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_message_begin</span>
+111:       <span class="ruby-identifier">version</span> = <span class="ruby-identifier">read_i32</span>
+112:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+113:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">version</span> &amp; <span class="ruby-constant">VERSION_MASK</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">VERSION_1</span>)
+114:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ProtocolException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ProtocolException</span><span class="ruby-operator">::</span><span class="ruby-constant">BAD_VERSION</span>, <span class="ruby-value str">'Missing version identifier'</span>)
+115:         <span class="ruby-keyword kw">end</span>
+116:         <span class="ruby-identifier">type</span> = <span class="ruby-identifier">version</span> &amp; <span class="ruby-constant">TYPE_MASK</span>
+117:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">read_string</span>
+118:         <span class="ruby-identifier">seqid</span> = <span class="ruby-identifier">read_i32</span>
+119:         [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">seqid</span>]
+120:       <span class="ruby-keyword kw">else</span>
+121:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">strict_read</span>
+122:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ProtocolException</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">ProtocolException</span><span class="ruby-operator">::</span><span class="ruby-constant">BAD_VERSION</span>, <span class="ruby-value str">'No version identifier, old protocol client?'</span>)
+123:         <span class="ruby-keyword kw">end</span>
+124:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-identifier">version</span>)
+125:         <span class="ruby-identifier">type</span> = <span class="ruby-identifier">read_byte</span>
+126:         <span class="ruby-identifier">seqid</span> = <span class="ruby-identifier">read_i32</span>
+127:         [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">seqid</span>]
+128:       <span class="ruby-keyword kw">end</span>
+129:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-set-begin-method" class="method-detail ">
+				<a name="method-i-read_set_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_set_begin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-set-begin-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 156</span>
+156:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_set_begin</span>
+157:       <span class="ruby-identifier">etype</span> = <span class="ruby-identifier">read_byte</span>
+158:       <span class="ruby-identifier">size</span> = <span class="ruby-identifier">read_i32</span>
+159:       [<span class="ruby-identifier">etype</span>, <span class="ruby-identifier">size</span>]
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-string-method" class="method-detail ">
+				<a name="method-i-read_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_string</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 212</span>
+212:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_string</span>
+213:       <span class="ruby-identifier">sz</span> = <span class="ruby-identifier">read_i32</span>
+214:       <span class="ruby-identifier">dat</span> = <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">read_all</span>(<span class="ruby-identifier">sz</span>)
+215:       <span class="ruby-identifier">dat</span>
+216:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-struct-begin-method" class="method-detail ">
+				<a name="method-i-read_struct_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_struct_begin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-struct-begin-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 131</span>
+131:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_struct_begin</span>; <span class="ruby-keyword kw">nil</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-bool-method" class="method-detail ">
+				<a name="method-i-write_bool"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_bool</span><span
+						class="method-args">(bool)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-bool-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 76</span>
+76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_bool</span>(<span class="ruby-identifier">bool</span>)
+77:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">bool</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+78:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-byte-method" class="method-detail ">
+				<a name="method-i-write_byte"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_byte</span><span
+						class="method-args">(byte)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-byte-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">byte</span>)
+81:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">RangeError</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">byte</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">31</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">byte</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">32</span>
+82:       <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">byte</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'c'</span>))
+83:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-double-method" class="method-detail ">
+				<a name="method-i-write_double"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_double</span><span
+						class="method-args">(dub)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-double-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 101</span>
+101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_double</span>(<span class="ruby-identifier">dub</span>)
+102:       <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">dub</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'G'</span>))
+103:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-field-begin-method" class="method-detail ">
+				<a name="method-i-write_field_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_field_begin</span><span
+						class="method-args">(name, type, id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-field-begin-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_field_begin</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">id</span>)
+52:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">type</span>)
+53:       <span class="ruby-identifier">write_i16</span>(<span class="ruby-identifier">id</span>)
+54:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-field-stop-method" class="method-detail ">
+				<a name="method-i-write_field_stop"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_field_stop</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-field-stop-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_field_stop</span>
+57:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-constant">Thrift</span><span class="ruby-operator">::</span><span class="ruby-constant">Types</span><span class="ruby-operator">::</span><span class="ruby-constant">STOP</span>)
+58:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-i--method" class="method-detail ">
+				<a name="method-i-write_i16"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_i16</span><span
+						class="method-args">(i16)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-i--source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 85</span>
+85:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_i16</span>(<span class="ruby-identifier">i16</span>)
+86:       <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">i16</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'n'</span>))
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-i--method" class="method-detail ">
+				<a name="method-i-write_i32"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_i32</span><span
+						class="method-args">(i32)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-i--source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">i32</span>)
+90:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">RangeError</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i32</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">31</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">i32</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">31</span>
+91:       <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">i32</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'N'</span>))
+92:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-i--method" class="method-detail ">
+				<a name="method-i-write_i64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_i64</span><span
+						class="method-args">(i64)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-i--source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 94</span>
+94:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_i64</span>(<span class="ruby-identifier">i64</span>)
+95:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">RangeError</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i64</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">63</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">i64</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">2</span><span class="ruby-operator">**</span><span class="ruby-value">64</span>
+96:       <span class="ruby-identifier">hi</span> = <span class="ruby-identifier">i64</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">32</span>
+97:       <span class="ruby-identifier">lo</span> = <span class="ruby-identifier">i64</span> &amp; <span class="ruby-value">0xffffffff</span>
+98:       <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">write</span>([<span class="ruby-identifier">hi</span>, <span class="ruby-identifier">lo</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'N2'</span>))
+99:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-list-begin-method" class="method-detail ">
+				<a name="method-i-write_list_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_list_begin</span><span
+						class="method-args">(etype, size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-list-begin-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 66</span>
+66:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_list_begin</span>(<span class="ruby-identifier">etype</span>, <span class="ruby-identifier">size</span>)
+67:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">etype</span>)
+68:       <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">size</span>)
+69:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-map-begin-method" class="method-detail ">
+				<a name="method-i-write_map_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_map_begin</span><span
+						class="method-args">(ktype, vtype, size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-map-begin-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_map_begin</span>(<span class="ruby-identifier">ktype</span>, <span class="ruby-identifier">vtype</span>, <span class="ruby-identifier">size</span>)
+61:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">ktype</span>)
+62:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">vtype</span>)
+63:       <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">size</span>)
+64:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-message-begin-method" class="method-detail ">
+				<a name="method-i-write_message_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_message_begin</span><span
+						class="method-args">(name, type, seqid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-message-begin-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 34</span>
+34:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_message_begin</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">seqid</span>)
+35:       <span class="ruby-comment cmt"># this is necessary because we added (needed) bounds checking to </span>
+36:       <span class="ruby-comment cmt"># write_i32, and 0x80010000 is too big for that.</span>
+37:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">strict_write</span>
+38:         <span class="ruby-identifier">write_i16</span>(<span class="ruby-constant">VERSION_1</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>)
+39:         <span class="ruby-identifier">write_i16</span>(<span class="ruby-identifier">type</span>)
+40:         <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">name</span>)
+41:         <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">seqid</span>)
+42:       <span class="ruby-keyword kw">else</span>
+43:         <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">name</span>)
+44:         <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">type</span>)
+45:         <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">seqid</span>)
+46:       <span class="ruby-keyword kw">end</span>
+47:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-set-begin-method" class="method-detail ">
+				<a name="method-i-write_set_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_set_begin</span><span
+						class="method-args">(etype, size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-set-begin-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_set_begin</span>(<span class="ruby-identifier">etype</span>, <span class="ruby-identifier">size</span>)
+72:       <span class="ruby-identifier">write_byte</span>(<span class="ruby-identifier">etype</span>)
+73:       <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">size</span>)
+74:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-string-method" class="method-detail ">
+				<a name="method-i-write_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_string</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 105</span>
+105:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_string</span>(<span class="ruby-identifier">str</span>)
+106:       <span class="ruby-identifier">write_i32</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">length</span>)
+107:       <span class="ruby-identifier">trans</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">str</span>)
+108:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-struct-begin-method" class="method-detail ">
+				<a name="method-i-write_struct_begin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_struct_begin</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-struct-begin-source">
+<pre>
+    <span class="ruby-comment cmt"># File thrift/protocol/binary_protocol.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_struct_begin</span>(<span class="ruby-identifier">name</span>); <span class="ruby-keyword kw">nil</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
